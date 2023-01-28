@@ -7,7 +7,7 @@ use \Core;
 class Model extends Core\DbConn
 {
     public $data = [];
-    
+
     public function __construct()
     {
         parent::connect();

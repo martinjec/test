@@ -9,8 +9,8 @@ class DbConn
 {
     private $host = 'localhost';
     private $user = 'root';
-    private $password = 'root';
-    private $dbName = 'warehouse';
+    private $password = '';
+    private $dbName = 'Warehouse';
     private $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC

@@ -10,12 +10,12 @@ $(document).ready(function () {
       .children()
       .prop("required", true);
   });
-//Cancel button
+  //Cancel button
   $("#cancel").click(function (e) {
     e.preventDefault();
     window.location.href = "../../";
   });
-//Submit
+  //Submit
   $("#product_form").submit(function (e) {
     e.preventDefault();
     $.post(
@@ -25,11 +25,11 @@ $(document).ready(function () {
         name: $("#name").val(),
         price: $("#price").val(),
         selector: $("#productType").val(),
-        size: $("#size").val(),
-        weight: $("#weight").val(),
         height: $("#height").val(),
         width: $("#width").val(),
-        length: $("#length").val(),
+        length: $("#length").val(),  
+        dvd: $("#size").val(),
+        book: $("#weight").val(),
       },
       function (data) {
         //Response error message

@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use \Core;
+use \Views;
 use \Models;
 
 abstract class MainController
@@ -12,7 +12,7 @@ abstract class MainController
 
     public function __construct()
     {
-        $this->view = new Core\View();
+        $this->view = new Views\View();
         $this->model = new Models\Model();
     }
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Core;
+namespace Views;
 
 class View
 {
     public function render($name, $item = "")
     {
-        require 'Views/' . $name . '.php';
+        require 'Public/' . $name . '.php';
     }
 }
