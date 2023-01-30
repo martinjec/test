@@ -15,20 +15,19 @@ class AddItem extends MainController
         $this->view->render('Add');
         $this->view->render('Footer');
     }
-    //Get data with product properties
+    //Get product data 
     public function getData()
     {
-        $selector = strtolower($_POST['selector']);
+        $selector = $_POST['selector'];
         $obj = 'Clases\\' . $selector;
         $obj = new $obj();
         $product = $obj->productInput();
         return $product;
     }
-    //Add data to database
+    //Add product to database
     public function addItem()
     {
         $product = $this->getData();
-        var_dump($product);
         $this->model->setItems($product);
     }
 }
